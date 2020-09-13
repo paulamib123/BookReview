@@ -18,7 +18,7 @@ This is a web app in which users can Login, Sign Up and search for books.
 <br/>
 
 ##### Sign Up Page
-<img src="https://github.com/paulamib123/BookReview/blob/master/signup.png:" style="width:600px;">
+<img src=https://github.com/paulamib123/BookReview/blob/master/signup.png" style="width:600px;">
 <br/>
 
 ##### Log In Page
