@@ -76,8 +76,17 @@ def searchData(query):
 
     return jsonify({"books" : books})
 
-#@app.route("/search/<isbn>")
-#def show_book():
+@app.route("/review/<isbn>", methods=["GET"])
+def show_book(isbn):
+    return search_isbn_data(isbn)
+
+def search_isbn_data(query):
+    book = Books.query.filter(Books.isbn.like(query)).one()
+    data = {
+        "isbn" : book.isbn, "title" : book.title, "author" : book.author, "year" : book.year
+    }
+    print(data)
+    return jsonify(data)
     
 
     

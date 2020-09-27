@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
+import { Redirect, Link } from 'react-router-dom'
 
 export default function Search() {
     const [books, setbooks] = useState([])
@@ -64,7 +65,10 @@ export default function Search() {
                                             <ListGroup.Item><b>Year of publication: </b>{book.year}</ListGroup.Item>
                                         </ListGroup>
                                         <Card.Body>
-                                            <Card.Link href="#">Write A Review</Card.Link>
+                                            {/* <Card.Link>
+                                                Write A Review
+                                            </Card.Link> */}
+                                            <Link to={`/review/${book.isbn}`}>Write a Review</Link> 
                                         </Card.Body>
                                     </Card>
                                 </div>
